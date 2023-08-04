@@ -1,7 +1,12 @@
 #ESTE ES EL ADAPTADOR PRIMARIO PARA WHATSAPP
 from flask import Flask, jsonify, request
+from dotenv import load_dotenv, find_dotenv
+import os
+
+_ = load_dotenv(find_dotenv()) # read local .env file
+whatsapp_token = os.environ['WHATSAPP_TOKEN']
+
 app = Flask(__name__)
-#CUANDO RECIBAMOS LAS PETICIONES EN ESTA RUTA
 @app.route("/whatsapp/", methods=["POST", "GET"])
 def webhook_whatsapp():
     #Me sentiría más cómodo con un POST
@@ -32,8 +37,5 @@ def webhook_whatsapp():
 
 
 if __name__ == "__main__":
-  from dotenv import load_dotenv, find_dotenv
-  import os
-  _ = load_dotenv(find_dotenv()) # read local .env file
-  print(os.environ['WHATSAPP_TOKEN'])
+ 
   app.run(debug=False)
