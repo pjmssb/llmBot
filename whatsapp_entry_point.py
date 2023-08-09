@@ -2,15 +2,20 @@
 from flask import Flask, jsonify, request
 from dotenv import load_dotenv, find_dotenv
 import os
+from model import bot_entry_port
 
-_ = load_dotenv(find_dotenv()) # read local .env file
+
+_ = load_dotenv(find_dotenv()) 
 whatsapp_token = os.environ['WHATSAPP_TOKEN']
+
+bot_entry = bot_entry_port
 
 app = Flask(__name__)
 @app.route("/whatsapp/", methods=["POST", "GET"])
 def webhook_whatsapp():
-    #Me sentiría más cómodo con un POST
+    #TODO: Convertir a POST
     if request.method == "GET":
+        print("llega a este punto");
         #SI EL TOKEN ES IGUAL AL QUE RECIBIMOS
         if request.args.get('hub.verify_token') == "HolaNovato":
             #ESCRIBIMOS EN EL NAVEGADOR EL VALOR DEL RETO RECIBIDO DESDE FACEBOOK
