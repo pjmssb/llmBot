@@ -1,0 +1,97 @@
+{
+    "version": "1.0",
+    "resource": "/lambda_llmbot",
+    "path": "/default/lambda_llmbot",
+    "httpMethod": "GET",
+    "headers": {
+      "Content-Length": "0",
+      "Host": "0h8tgju9t2.execute-api.us-east-1.amazonaws.com",
+      "User-Agent": "facebookplatform/1.0 (+http://developers.facebook.com)",
+      "X-Amzn-Trace-Id": "Root=1-64d8a2c6-592455326efa91824d389c28",
+      "X-Forwarded-For": "69.171.249.8",
+      "X-Forwarded-Port": "443",
+      "X-Forwarded-Proto": "https",
+      "accept": "*/*",
+      "accept-encoding": "deflate, gzip"
+    },
+    "multiValueHeaders": {
+      "Content-Length": [
+        "0"
+      ],
+      "Host": [
+        "0h8tgju9t2.execute-api.us-east-1.amazonaws.com"
+      ],
+      "User-Agent": [
+        "facebookplatform/1.0 (+http://developers.facebook.com)"
+      ],
+      "X-Amzn-Trace-Id": [
+        "Root=1-64d8a2c6-592455326efa91824d389c28"
+      ],
+      "X-Forwarded-For": [
+        "69.171.249.8"
+      ],
+      "X-Forwarded-Port": [
+        "443"
+      ],
+      "X-Forwarded-Proto": [
+        "https"
+      ],
+      "accept": [
+        "*/*"
+      ],
+      "accept-encoding": [
+        "deflate, gzip"
+      ]
+    },
+    "queryStringParameters": {
+      "hub.challenge": "1198736873",
+      "hub.mode": "subscribe",
+      "hub.verify_token": "llmbot_3st33s3lS3cr3t0D3lW3bh00k"
+    },
+    "multiValueQueryStringParameters": {
+      "hub.challenge": [
+        "1198736873"
+      ],
+      "hub.mode": [
+        "subscribe"
+      ],
+      "hub.verify_token": [
+        "llmbot_3st33s3lS3cr3t0D3lW3bh00k"
+      ]
+    },
+    "requestContext": {
+      "accountId": "337340005201",
+      "apiId": "0h8tgju9t2",
+      "domainName": "0h8tgju9t2.execute-api.us-east-1.amazonaws.com",
+      "domainPrefix": "0h8tgju9t2",
+      "extendedRequestId": "Jl5e_ig2oAMEa-g=",
+      "httpMethod": "GET",
+      "identity": {
+        "accessKey": null,
+        "accountId": null,
+        "caller": null,
+        "cognitoAmr": null,
+        "cognitoAuthenticationProvider": null,
+        "cognitoAuthenticationType": null,
+        "cognitoIdentityId": null,
+        "cognitoIdentityPoolId": null,
+        "principalOrgId": null,
+        "sourceIp": "69.171.249.8",
+        "user": null,
+        "userAgent": "facebookplatform/1.0 (+http://developers.facebook.com)",
+        "userArn": null
+      },
+      "path": "/default/lambda_llmbot",
+      "protocol": "HTTP/1.1",
+      "requestId": "Jl5e_ig2oAMEa-g=",
+      "requestTime": "13/Aug/2023:09:30:46 +0000",
+      "requestTimeEpoch": 1691919046025,
+      "resourceId": "ANY /lambda_llmbot",
+      "resourcePath": "/lambda_llmbot",
+      "stage": "default"
+    },
+    "pathParameters": null,
+    "stageVariables": null,
+    "body": null,
+    "isBase64Encoded": false
+  }

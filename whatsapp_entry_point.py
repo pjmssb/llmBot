@@ -16,8 +16,8 @@ def webhook_whatsapp():
     #TODO: Convertir a POST
     if request.method == "GET":
         print("llega a este punto");
-        #SI EL TOKEN ES IGUAL AL QUE RECIBIMOS
-        if request.args.get('hub.verify_token') == "HolaNovato":
+        #TODO: Cambiara a token de .env
+        if request.args.get('hub.verify_token') == "HolaNovato": 
             #ESCRIBIMOS EN EL NAVEGADOR EL VALOR DEL RETO RECIBIDO DESDE FACEBOOK
             return request.args.get('hub.challenge')
         else:
