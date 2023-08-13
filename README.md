@@ -16,4 +16,6 @@ Este es un proyecto de un chatbot basado en langchain y algún modelo de LLM com
     * Flask: Deberiamos utilizar un servidor WSGI de verdad, pero esto es una prueba de desarrollo. Así que mantendremos el servidorcito integrado. https://www.digitalocean.com/community/tutorials/how-to-create-your-first-web-application-using-flask-and-python-3
 * Conversación CLI
 * Meta Whatsapp AWS-based echo bot: https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-whatsapp-echo-bot/
+* Programador novato - Contestar Whatsapp https://www.programadornovato.com/contestar-los-whatsapps-recibidos-en-python/
+
 
