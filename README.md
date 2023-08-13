@@ -8,6 +8,8 @@ Este es un proyecto de un chatbot basado en langchain y algún modelo de LLM com
 
 #Recursos
 * Mi página de meta developer: https://developers.facebook.com/apps/769631504846897/whatsapp-business/wa-dev-console/?business_id=1796476240770635
+* API URL: https://0h8tgju9t2.execute-api.us-east-1.amazonaws.com/default/lambda_llmbot
+* Firma de Whatsapp webhook: llmbot_3st33s3lS3cr3t0D3lW3bh00k
 
 # Características del software
 * Conversación Whatssapp: https://www.programadornovato.com/crear-un-chatbot-inteligente-con-whatsapp-en-python-gratis/
