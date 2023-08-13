@@ -6,6 +6,8 @@ Este es un proyecto de un chatbot basado en langchain y algún modelo de LLM com
 * Patrón puertos y adaptadores / Hexagonal Architecture
 * Screaming architecture
 
+#Recursos
+* Mi página de meta developer: https://developers.facebook.com/apps/769631504846897/whatsapp-business/wa-dev-console/?business_id=1796476240770635
 
 # Características del software
 * Conversación Whatssapp: https://www.programadornovato.com/crear-un-chatbot-inteligente-con-whatsapp-en-python-gratis/
