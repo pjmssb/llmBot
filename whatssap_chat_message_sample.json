@@ -1,0 +1,95 @@
+{
+    "version": "1.0",
+    "resource": "/lambda_llmbot",
+    "path": "/default/lambda_llmbot",
+    "httpMethod": "POST",
+    "headers": {
+        "Content-Length": "495",
+        "Content-Type": "application/json",
+        "Host": "0h8tgju9t2.execute-api.us-east-1.amazonaws.com",
+        "User-Agent": "facebookexternalua",
+        "X-Amzn-Trace-Id": "Root=1-64e1a9ee-233042e97ffbe3012ec979d9",
+        "X-Forwarded-For": "173.252.95.116",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https",
+        "X-Hub-Signature": "sha1=9136b34b5e8df14f506d771890467283d2a34ac9",
+        "X-Hub-Signature-256": "sha256=08669663adf431ec608dd04983b3d011c0c0387b5206f5637341151569fc0d88",
+        "accept": "*/*",
+        "accept-encoding": "deflate, gzip"
+    },
+    "multiValueHeaders": {
+        "Content-Length": [
+            "495"
+        ],
+        "Content-Type": [
+            "application/json"
+        ],
+        "Host": [
+            "0h8tgju9t2.execute-api.us-east-1.amazonaws.com"
+        ],
+        "User-Agent": [
+            "facebookexternalua"
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-64e1a9ee-233042e97ffbe3012ec979d9"
+        ],
+        "X-Forwarded-For": [
+            "173.252.95.116"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ],
+        "X-Hub-Signature": [
+            "sha1=9136b34b5e8df14f506d771890467283d2a34ac9"
+        ],
+        "X-Hub-Signature-256": [
+            "sha256=08669663adf431ec608dd04983b3d011c0c0387b5206f5637341151569fc0d88"
+        ],
+        "accept": [
+            "*/*"
+        ],
+        "accept-encoding": [
+            "deflate, gzip"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "requestContext": {
+        "accountId": "337340005201",
+        "apiId": "0h8tgju9t2",
+        "domainName": "0h8tgju9t2.execute-api.us-east-1.amazonaws.com",
+        "domainPrefix": "0h8tgju9t2",
+        "extendedRequestId": "J8d9VjkVoAMEJng=",
+        "httpMethod": "POST",
+        "identity": {
+            "accessKey": null,
+            "accountId": null,
+            "caller": null,
+            "cognitoAmr": null,
+            "cognitoAuthenticationProvider": null,
+            "cognitoAuthenticationType": null,
+            "cognitoIdentityId": null,
+            "cognitoIdentityPoolId": null,
+            "principalOrgId": null,
+            "sourceIp": "173.252.95.116",
+            "user": null,
+            "userAgent": "facebookexternalua",
+            "userArn": null
+        },
+        "path": "/default/lambda_llmbot",
+        "protocol": "HTTP/1.1",
+        "requestId": "J8d9VjkVoAMEJng=",
+        "requestTime": "20/Aug/2023:05:51:42 +0000",
+        "requestTimeEpoch": 1692510702656,
+        "resourceId": "ANY /lambda_llmbot",
+        "resourcePath": "/lambda_llmbot",
+        "stage": "default"
+    },
+    "pathParameters": null,
+    "stageVariables": null,
+    "body": "{\"object\":\"whatsapp_business_account\",\"entry\":[{\"id\":\"110103295509948\",\"changes\":[{\"value\":{\"messaging_product\":\"whatsapp\",\"metadata\":{\"display_phone_number\":\"15550738801\",\"phone_number_id\":\"103289446198952\"},\"contacts\":[{\"profile\":{\"name\":\"Pablo J. Mogoll\\u00f3n\"},\"wa_id\":\"351962367751\"}],\"messages\":[{\"from\":\"351962367751\",\"id\":\"wamid.HBgMMzUxOTYyMzY3NzUxFQIAEhgSRDg5MjEyRDA0ODM2NDA2Njk3AA==\",\"timestamp\":\"1692510702\",\"text\":{\"body\":\"\\u00bfAl\\u00f3?\"},\"type\":\"text\"}]},\"field\":\"messages\"}]}]}",
+    "isBase64Encoded": false
+}
