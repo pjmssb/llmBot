@@ -1,62 +1,46 @@
-import hashlib
-import hmac
 import json
 import logging
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
+LLM_META_VERIFICATION = '3st4C4d3n4L4C4mb13D3spu3sD3Suscr1b1rm3?'
 
-def verify_signature(payload, token, received_signature):
-    computed_signature = hmac.new(token.encode(), msg=payload, digestmod=hashlib.sha256).hexdigest()
-    return hmac.compare_digest(computed_signature, received_signature)
 
 def lambda_handler(event, context):
+    logger.info("llmbot - Message arrived")
     
-    response = {
-        'statusCode': 200,
-        'body': json.dumps({'message': 'Received'})
-    }
+    user_agent = event['headers']['User-Agent'][0:8]
     
-    logger.info("Received WhatsApp event: %s", json.dumps(event))
-    
-    version = event['version']
-    logger.info("Received version: %s", json.dumps(version))
-    
-
-    
-    hub_mode = event['queryStringParameters']['hub.mode']
-    logger.info("Received hub_mode: %s", json.dumps(hub_mode))
-    if hub_mode == 'subscribe':
-        hub_challenge = event['queryStringParameters']['hub.challenge']
-        logger.info("Received hub_challenge: %s", json.dumps(hub_challenge))
-    
-        hub_verify_token = event['queryStringParameters']['hub.verify_token']
-        logger.info("Received hub_verify_token: %s", json.dumps(hub_verify_token))
-        return {
-              "statusCode": 200,
-              "body": hub_challenge,
-              "isBase64Encoded": 0
-            }
-    return response
-    
-    
-    
-
-    '''    
-    received_signature = event['headers'].get('X-WhatsApp-Signature')
-    logger.info("Received Signature: %s", json.dumps(received_signature))
-    payload = event['body']
-    logger.info("Received payload: %s", json.dumps(payload))
-    
-    challenge_token = event['body']
-    
-    #TODO: Cambiar a secret manager
-    TOKEN = 'llmbot_3st33s3lS3cr3t0D3lW3bh00k'
-     
-    if not verify_signature(payload, TOKEN, received_signature):
-        return {
-            'statusCode': 403,
-            'body': json.dumps({'message': 'Invalid signature'})
+    if user_agent != 'facebook':
+        logger.info('El evento no tiene formato de Meta %s',json.dumps(event))
+        return  {
+            'statusCode': 400,
+            'body': json.dumps({'message': 'Ceci n`est pas un message WhatsApp'})
         }
-    '''
+
+    # Esta porción se ejecuta sólo cuando se requiere una nueva subscripción como webhook
+    logger.info(f"llmbot - Parámetros: {event['queryStringParameters']}")
+    if event['queryStringParameters'] != None:
+        if event['queryStringParameters']['hub.mode'] == 'subscribe' and event['queryStringParameters']['hub.verify_token'] == LLM_META_VERIFICATION:
+            hub_challenge = event['queryStringParameters']['hub.challenge']
+            return {
+                "statusCode": 200,
+                "body": hub_challenge,
+                "isBase64Encoded": 0
+            }
     
+    #Esta porción procesa el mensaje recibido
+    mensaje = json.loads(event['body'])['entry'];
+    if mensaje != None:
+        logger.info(f"llmbot - Mensaje: {mensaje}")
+        mensaje_id = mensaje[0]['changes'][0]['value']['messages'][0]['id']
+        mensaje_telefono = mensaje[0]['changes'][0]['value']['messages'][0]['from']
+        mensaje_nombre = mensaje[0]['changes'][0]['value']['contacts'][0]['profile']['name'] 
+        mensaje_datos = mensaje[0]['changes'][0]['value']['messages'][0]['text']['body'] 
+        logger.info(f'llmbot - Llego el mensaje {mensaje_id} \ndesde el teléfono {mensaje_telefono} \nde {mensaje_nombre}  \ndiciendo: {mensaje_datos}')
+    
+
+    return  {
+        'statusCode': 400,
+        'body': 'Algo no esta bien'
+    }
