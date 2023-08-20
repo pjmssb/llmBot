@@ -93,3 +93,32 @@
     "body": "{\"object\":\"whatsapp_business_account\",\"entry\":[{\"id\":\"110103295509948\",\"changes\":[{\"value\":{\"messaging_product\":\"whatsapp\",\"metadata\":{\"display_phone_number\":\"15550738801\",\"phone_number_id\":\"103289446198952\"},\"contacts\":[{\"profile\":{\"name\":\"Pablo J. Mogoll\\u00f3n\"},\"wa_id\":\"351962367751\"}],\"messages\":[{\"from\":\"351962367751\",\"id\":\"wamid.HBgMMzUxOTYyMzY3NzUxFQIAEhgSRDg5MjEyRDA0ODM2NDA2Njk3AA==\",\"timestamp\":\"1692510702\",\"text\":{\"body\":\"\\u00bfAl\\u00f3?\"},\"type\":\"text\"}]},\"field\":\"messages\"}]}]}",
     "isBase64Encoded": false
 }
+
+
+
+[0]['changes'][0]
+[
+    {
+        'id': '110103295509948', 
+        'changes': [
+            {
+                'value': {
+                'messaging_product': 'whatsapp', 
+                'metadata': {'display_phone_number': '15550738801', 'phone_number_id': '103289446198952'}, 
+                'contacts': [{'profile': {'name': 'Pablo J. Mogollón'}, 'wa_id': '351962367751'}], 
+                'messages': [
+                    {
+                        'from': '351962367751', 
+                        'id': 'wamid.HBgMMzUxOTYyMzY3NzUxFQIAEhgSRDg5MjEyRDA0ODM2NDA2Njk3AA==', 
+                        'timestamp': '1692510702', 
+                        'text': {
+                            'body': '¿Aló?'
+                        }, 
+                        'type': 'text'
+                    }
+                ]
+                }, 'field': 'messages'
+            }
+        ]
+    }
+]
