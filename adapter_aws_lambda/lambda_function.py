@@ -1,12 +1,13 @@
 import json
 import logging
+import heyoo
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 LLM_META_VERIFICATION = '3st4C4d3n4L4C4mb13D3spu3sD3Suscr1b1rm3?'
 
 
-def lambda_handler(event, context):
+def lambda_handler(event, context): 
     logger.info("llmbot - Message arrived")
     
     user_agent = event['headers']['User-Agent'][0:8]
