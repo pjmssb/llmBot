@@ -57,6 +57,14 @@ def lambda_handler(event, context):
         }
     
     wa_message = get_whatsapp_message(event) 
+
+    if wa_message == '{}':
+        logger.warning(f'llmbot - Algo no esta bien con el mensaje {wa_message}')
+        return  {
+            'statusCode': 400,
+            'body': 'Algo no esta bien con el mensaje {wa_message}'
+        }
+    
     sqs_client.send_message(
         QueueUrl = LLMBOT_SQS_URL,
         MessageBody = json.dumps(wa_message),
@@ -69,8 +77,4 @@ def lambda_handler(event, context):
     'body': 'Mensaje recibido y procesado'
     }
 
-    logger.warning(f'llmbot - Algo no esta bien con el mensaje {wa_message}')
-    return  {
-        'statusCode': 400,
-        'body': 'Algo no esta bien con el mensaje {wa_message}'
-    }
+
